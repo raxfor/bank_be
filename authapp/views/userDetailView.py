@@ -20,7 +20,7 @@ class UserDetailView(generics.RetrieveAPIView):
         valid_data = tokenBackend.decode(token, verify=False)
 
         if valid_data['user_id'] != kwargs['pk']:
-            stringResponse = {'detail': 'Unauthoized Request'}
+            stringResponse = {'detail': 'Unauthorized Request'}
             return Response(stringResponse, status=status.HTTP_401_UNAUTHORIZED)
 
         return super().get(request, * args, ** kwargs)    
