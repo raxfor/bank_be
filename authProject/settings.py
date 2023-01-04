@@ -121,7 +121,7 @@ WSGI_APPLICATION = 'authProject.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgresql://postgres:postgres@localhost:5432/banksecurity',
+        default='postgresql://postgres:300283@localhost:5432/banksecurity',
         conn_max_age=600
     )
 }
